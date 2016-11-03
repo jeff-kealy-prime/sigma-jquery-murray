@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  // effects
+  // effect button event listeners
   $("#slide-up").on("click", function() {
     $(".murray").slideUp(300).delay(250).fadeIn('slow');
   });
@@ -10,6 +10,8 @@ $(document).ready(function() {
   $("#fade-toggle").on("click", function() {
     $(".murray").fadeToggle("slow");
   });
+
+  // Create an ad-hoc animation with jQuery and CSS properties
   // $("#murray-box").on("click", ".murray", function() {
   //   $(this).animate({
   //     height: '-=50px',
@@ -24,17 +26,17 @@ $(document).ready(function() {
   //
   // });
 
+  // using a pre-made animation class from CSS
   $("#murray-box").on("click", ".murray", function() {
     $(this).toggleClass("spin-murray");
   });
-
-
 
   $("#add-murray").on("click", function() {
     var size = randomNumber(150, 400);
     var img = '<img class="murray" src="http://www.fillmurray.com/' + size + '/' + size + '" />';
     $("#murray-box").append(img);
   });
+  
   $("#remove-murray").on("click", function() {
     $("#murray-box").empty();
   });
