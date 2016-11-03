@@ -1,0 +1,11 @@
+/* class applied to a murray running an animation */
+.spin-murray {
+  animation: spin 4s linear infinite;
+}
+
+/* Animation defintion */
+@keyframes spin {
+  50% {
+    transform: rotate(360deg);
+  }
+}
